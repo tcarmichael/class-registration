@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:classes="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="16dp" >
+
+        <LinearLayout
+            android:id="@+id/subject_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dip"
+            android:gravity="center" >
+
+            <Spinner
+                android:id="@+id/subjects"
+                style="@style/TextAppearance.EditEvent_SpinnerButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:prompt="@string/subject"
+                android:spinnerMode="dialog" />
+
+            <EditText
+                android:id="@+id/course_number"
+                style="@style/TextAppearance.EditEvent_Value"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/label_hint_course_number"
+                android:inputType="number"
+                android:maxLength="4" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/course_title"
+            style="@style/TextAppearance.EditEvent_Value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dip"
+            android:ems="10"
+            android:hint="@string/label_hint_course_title"
+            android:inputType="textCapWords"
+            android:singleLine="true" >
+        </EditText>
+
+        <LinearLayout
+            android:id="@+id/info_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/credit_hours"
+                style="@style/TextAppearance.EditEvent_Value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/label_hint_credit_hours"
+                android:inputType="number"
+                android:maxLength="1" />
+
+            <EditText
+                android:id="@+id/crn"
+                style="@style/TextAppearance.EditEvent_Value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/label_hint_crn"
+                android:inputType="number"
+                android:maxLength="5" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/online"
+            style="@style/TextAppearance.EditEvent_Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dip"
+            android:layout_marginTop="4dip"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/label_online" />
+
+        <TextView
+            style="@style/TextAppearance.EditEvent_LabelSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_times" />
+
+        <LinearLayout
+            android:id="@+id/day_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dip"
+            android:layout_marginRight="0dip" >
+
+            <CheckBox
+                android:id="@+id/monday_check"
+                style="@style/TextAppearance.Checkbox_Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="toggleDay"
+                android:text="@string/label_monday_short"
+                android:textColor="#333333" />
+
+            <CheckBox
+                android:id="@+id/tuesday_check"
+                style="@style/TextAppearance.Checkbox_Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="toggleDay"
+                android:text="@string/label_tuesday_short"
+                android:textColor="#333333" />
+
+            <CheckBox
+                android:id="@+id/wednesday_check"
+                style="@style/TextAppearance.Checkbox_Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="toggleDay"
+                android:text="@string/label_wednesday_short"
+                android:textColor="#333333" />
+
+            <CheckBox
+                android:id="@+id/thursday_check"
+                style="@style/TextAppearance.Checkbox_Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="toggleDay"
+                android:text="@string/label_thursday_short"
+                android:textColor="#333333" />
+
+            <CheckBox
+                android:id="@+id/friday_check"
+                style="@style/TextAppearance.Checkbox_Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="toggleDay"
+                android:text="@string/label_friday_short"
+                android:textColor="#333333" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/monday_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/TextAppearance.EditEvent_LabelSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="@string/label_monday"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <LinearLayout
+                android:id="@+id/monday_time_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.tandy.registration.ui.TimeButton
+                    android:id="@+id/monday_start"
+                    style="@style/TextAppearance.EditEvent_SpinnerButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="setTime"
+                    classes:hour="8"
+                    classes:isStartTime="true"
+                    classes:minute="0"
+                    classes:pair="@+id/monday_end" />
+
+                <TextView
+                    style="@style/TextAppearance.EditEvent_LabelSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_to"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <com.tandy.registration.ui.TimeButton
+                    android:id="@+id/monday_end"
+                    style="@style/TextAppearance.EditEvent_SpinnerButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="setTime"
+                    classes:hour="8"
+                    classes:isStartTime="false"
+                    classes:minute="55"
+                    classes:pair="@id/monday_start" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tuesday_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/TextAppearance.EditEvent_LabelSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="@string/label_tuesday"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <LinearLayout
+                android:id="@+id/tuesday_time_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.tandy.registration.ui.TimeButton
+                    android:id="@+id/tuesday_start"
+                    style="@style/TextAppearance.EditEvent_SpinnerButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="setTime"
+                    classes:hour="8"
+                    classes:isStartTime="true"
+                    classes:minute="0"
+                    classes:pair="@+id/tuesday_end" />
+
+                <TextView
+                    style="@style/TextAppearance.EditEvent_LabelSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_to"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <com.tandy.registration.ui.TimeButton
+                    android:id="@+id/tuesday_end"
+                    style="@style/TextAppearance.EditEvent_SpinnerButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="setTime"
+                    classes:hour="8"
+                    classes:isStartTime="false"
+                    classes:minute="55"
+                    classes:pair="@id/tuesday_start" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/wednesday_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/TextAppearance.EditEvent_LabelSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="@string/label_wednesday"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <LinearLayout
+                android:id="@+id/wednesday_time_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.tandy.registration.ui.TimeButton
+                    android:id="@+id/wednesday_start"
+                    style="@style/TextAppearance.EditEvent_SpinnerButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="setTime"
+                    classes:hour="8"
+                    classes:isStartTime="true"
+                    classes:minute="0"
+                    classes:pair="@+id/wednesday_end" />
+
+                <TextView
+                    style="@style/TextAppearance.EditEvent_LabelSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_to"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <com.tandy.registration.ui.TimeButton
+                    android:id="@+id/wednesday_end"
+                    style="@style/TextAppearance.EditEvent_SpinnerButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="setTime"
+                    classes:hour="8"
+                    classes:isStartTime="false"
+                    classes:minute="55"
+                    classes:pair="@id/wednesday_start" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/thursday_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/TextAppearance.EditEvent_LabelSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="@string/label_thursday"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <LinearLayout
+                android:id="@+id/thursday_time_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.tandy.registration.ui.TimeButton
+                    android:id="@+id/thursday_start"
+                    style="@style/TextAppearance.EditEvent_SpinnerButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="setTime"
+                    classes:hour="8"
+                    classes:isStartTime="true"
+                    classes:minute="0"
+                    classes:pair="@+id/thursday_end" />
+
+                <TextView
+                    style="@style/TextAppearance.EditEvent_LabelSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_to"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <com.tandy.registration.ui.TimeButton
+                    android:id="@+id/thursday_end"
+                    style="@style/TextAppearance.EditEvent_SpinnerButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="setTime"
+                    classes:hour="8"
+                    classes:isStartTime="false"
+                    classes:minute="55"
+                    classes:pair="@id/thursday_start" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/friday_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/TextAppearance.EditEvent_LabelSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="@string/label_friday"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <LinearLayout
+                android:id="@+id/friday_time_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.tandy.registration.ui.TimeButton
+                    android:id="@+id/friday_start"
+                    style="@style/TextAppearance.EditEvent_SpinnerButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="setTime"
+                    classes:hour="8"
+                    classes:isStartTime="true"
+                    classes:minute="0"
+                    classes:pair="@+id/friday_end" />
+
+                <TextView
+                    style="@style/TextAppearance.EditEvent_LabelSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_to"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <com.tandy.registration.ui.TimeButton
+                    android:id="@+id/friday_end"
+                    style="@style/TextAppearance.EditEvent_SpinnerButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="setTime"
+                    classes:hour="8"
+                    classes:isStartTime="false"
+                    classes:minute="55"
+                    classes:pair="@id/friday_start" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

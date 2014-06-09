@@ -1,0 +1,131 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!--<style parent="style/Sherlock.__Widget.Holo.Spinner" name="SpinnerButton"/>-->
+
+    <style name="EditEventCustomActionButton." parent="android:Widget.AppCompat.Light.ActionButton">
+    <!---<style parent="style/Widget.Sherlock.Light.ActionButton" name="EditEventCustomActionButton">-->
+
+    <item name="android:layout_height">match_parent</item>
+
+    <item name="android:layout_width">match_parent</item>
+
+    <item name="android:layout_weight">1</item>
+
+    <item name="android:focusable">true</item>
+
+    <item name="android:orientation">horizontal</item>
+
+</style>
+
+
+    <!---<style parent="style/TextAppearance.Sherlock.Widget.ActionBar.Menu" name="EditEventCustomActionButtonText">-->
+    <style name="EditEventCustomActionButtonText" parent="android:Widget.AppCompat.Light.ActionBar">
+
+    <item name="android:layout_height">match_parent</item>
+
+    <item name="android:layout_width">wrap_content</item>
+
+    <item name="android:layout_gravity">center</item>
+
+    <item name="android:gravity">center</item>
+
+    <item name="android:orientation">horizontal</item>
+
+    <item name="android:layout_weight">1</item>
+
+    <item name="android:singleLine">true</item>
+
+    <item name="android:ellipsize">none</item>
+
+    <item name="android:padding">4dp</item>
+
+    <item name="android:drawablePadding">4dp</item>
+
+</style>
+
+    <style parent="android:TextAppearance" name="TextAppearance"> </style>
+
+
+    -<style name="TextAppearance.EditEvent_Small">
+
+    <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+
+    <item name="android:textSize">14sp</item>
+
+    <item name="android:textColor">#FFAAAAAA</item>
+
+    <!-- <item name="android:textAllCaps">true</item> -->
+
+
+</style>
+
+
+    -<style name="TextAppearance.Checkbox_Small">
+
+    <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+
+    <item name="android:textSize">14sp</item>
+
+    <!-- <item name="android:textAllCaps">true</item> -->
+
+
+</style>
+
+
+    -<style parent="TextAppearance.EditEvent_Small" name="TextAppearance.EditEvent_LabelSmall">
+
+    <item name="android:minHeight">24dip</item>
+
+    <item name="android:layout_width">144dip</item>
+
+    <!-- <item name="android:layout_marginLeft">16dip</item> -->
+
+
+    <!-- <item name="android:layout_marginRight">16dip</item> -->
+
+
+    <item name="android:paddingLeft">8dip</item>
+
+    <item name="android:paddingRight">8dip</item>
+
+    <item name="android:layout_marginBottom">-6dip</item>
+
+</style>
+
+
+    -<style name="TextAppearance.EditEvent">
+
+    <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+
+    <item name="android:textSize">18sp</item>
+
+    <item name="android:textColor">#FF333333</item>
+
+</style>
+
+
+    -<style parent="TextAppearance.EditEvent" name="TextAppearance.EditEvent_Value">
+
+    <item name="android:gravity">center_vertical</item>
+
+    <item name="android:layout_gravity">center_vertical</item>
+
+</style>
+
+    <style name="TextAppearance.EditEvent_Spinner" parent="android:Widget.Holo.Spinner">
+    <!---<style parent="style/Sherlock.__Widget.Holo.Spinner" name="TextAppearance.EditEvent_Spinner">-->
+
+    <item name="android:textSize">18sp</item>
+
+    <item name="android:textColor">#FF333333</item>
+
+</style>
+
+    <style parent="TextAppearance.EditEvent_Spinner" name="TextAppearance.EditEvent_SpinnerButton"> </style>
+
+</resources>

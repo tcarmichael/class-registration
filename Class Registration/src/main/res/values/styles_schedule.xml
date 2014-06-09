@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File created by the Android Action Bar Style Generator
+
+     Copyright (C) 2011 The Android Open Source Project
+     Copyright (C) 2012 readyState Software Ltd
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+
+    <style name="Theme.Schedule" parent="@android:style/Theme.AppCompat.Light">
+        <!--<item name="android:actionBarItemBackground">@drawable/selectable_background_schedule</item>-->
+        <item name="android:popupMenuStyle">@style/PopupMenu.Schedule</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Schedule</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Schedule</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Schedule</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Schedule</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_schedule</item>
+        <!--<item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_schedule</item>-->
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Schedule</item>
+
+        <item name="actionBarItemBackground">@drawable/selectable_background_schedule</item>
+        <item name="popupMenuStyle">@style/PopupMenu.Schedule</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Schedule</item>
+        <item name="actionBarTabStyle">@style/ActionBarTabStyle.Schedule</item>
+        <item name="actionDropDownStyle">@style/DropDownNav.Schedule</item>
+        <item name="actionBarStyle">@style/ActionBar.Solid.Schedule</item>
+        <item name="actionModeBackground">@drawable/cab_background_top_schedule</item>
+        <item name="actionModeSplitBackground">@drawable/cab_background_bottom_schedule</item>
+        <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Schedule</item>
+
+
+    </style>
+
+    <style name="ActionBar.Solid.Schedule" parent="@android:style/Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="android:background">@drawable/ab_solid_schedule</item>
+        <!--<item name="android:backgroundStacked">@drawable/ab_stacked_solid_schedule</item>-->
+        <!--<item name="android:backgroundSplit">@drawable/ab_bottom_solid_schedule</item>-->
+        <item name="android:progressBarStyle">@style/ProgressBar.Schedule</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Schedule" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_schedule</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Schedule</item>
+    </style>
+
+    <style name="PopupMenu.Schedule" parent="@android:style/Widget.Holo.Light.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_schedule</item>
+    </style>
+
+    <style name="DropDownListView.Schedule" parent="@android:style/Widget.Holo.Light.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_schedule</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Schedule" parent="@android:style/Widget.AppCompat.Light.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_schedule</item>
+    </style>
+
+    <style name="DropDownNav.Schedule" parent="@android:style/Widget.Holo.Light.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_schedule</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_schedule</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_schedule</item>
+    </style>
+
+    <style name="ProgressBar.Schedule" parent="@android:style/Widget.Holo.Light.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_schedule</item>
+    </style>
+
+    <style name="ActionButton.CloseMode.Schedule" parent="@android:style/Widget.Holo.Light.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_schedule</item>
+    </style>
+
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Schedule.Widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Schedule</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Schedule</item>
+    </style>
+
+</resources>

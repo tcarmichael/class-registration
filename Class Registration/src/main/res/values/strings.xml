@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">Class Registration</string>
+
+    <string name="menu_settings">Settings</string>
+
+    <string name="title_activity_classes">Classes</string>
+
+    <string name="subject">Pick a subject</string>
+
+
+    -<string-array name="days">
+
+    <item>Monday</item>
+
+    <item>Tuesday</item>
+
+    <item>Wednesday</item>
+
+    <item>Thursday</item>
+
+    <item>Friday</item>
+
+</string-array>
+
+
+    -<string-array name="schedule_actions">
+
+    <item>View</item>
+
+    <item>Rename</item>
+
+    <item>Delete</item>
+
+</string-array>
+
+    <string name="label_subject">Subject</string>
+
+    <string name="label_hint_course_number">Course number</string>
+
+    <string name="label_hint_course_title">Course title (ex. Writing I)</string>
+
+    <string name="label_hint_credit_hours">Credit hours</string>
+
+    <string name="label_hint_crn">CRN</string>
+
+    <string name="label_online">Online</string>
+
+    <string name="label_times">Times</string>
+
+    <string name="label_monday_short">M</string>
+
+    <string name="label_tuesday_short">T</string>
+
+    <string name="label_wednesday_short">W</string>
+
+    <string name="label_thursday_short">R</string>
+
+    <string name="label_friday_short">F</string>
+
+    <string name="label_monday">Monday</string>
+
+    <string name="label_tuesday">Tuesday</string>
+
+    <string name="label_wednesday">Wednesday</string>
+
+    <string name="label_thursday">Thursday</string>
+
+    <string name="label_friday">Friday</string>
+
+    <string name="label_from">from</string>
+
+    <string name="label_to">to</string>
+
+    <string name="label_cancel">Cancel</string>
+
+    <string name="label_done">Done</string>
+
+    <string name="label_course_title">Course Title</string>
+    <string name="done">Done</string>
+    <string name="cancel">Cancel</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/add" android:icon="@drawable/ic_action_new" android:title="Add Class" android:showAsAction="ifRoom|withText"></item>
+    <item android:id="@+id/select_schedule" android:title="Select Schedule" android:showAsAction="never|withText"></item>
+    
+    <item android:id="@+id/view_crns" android:title="View CRNs" android:showAsAction="never|withText"></item>
+    <item android:id="@+id/view_classes" android:title="View All Classes" android:showAsAction="never|withText"></item><item android:id="@+id/credit_hours" android:title="Credit Hours" android:showAsAction="never|withText"></item>
+    
+
+</menu>

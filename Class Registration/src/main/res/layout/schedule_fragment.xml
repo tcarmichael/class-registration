@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:classes="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:requiresFadingEdge="vertical" >
+
+    <view
+        class="com.tandy.registration.ui.ScheduleLayout"
+        android:id="@+id/schedule"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        classes:columns="1">
+
+        <view
+            android:id="@+id/time_ruler"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            class="com.tandy.registration.ui.TimeRulerView"
+            classes:dividerColor="#22000000"
+            classes:endHour="21"
+            classes:headerWidth="@dimen/schedule_label_header_width"
+            classes:hourHeight="@dimen/schedule_hour_height"
+            classes:labelColor="#000000"
+            classes:labelPaddingLeft="@dimen/schedule_label_padding"
+            classes:labelTextSize="@dimen/text_size_small"
+            classes:startHour="8" />
+    </view>
+
+</ScrollView>
